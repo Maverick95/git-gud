@@ -1,1 +1,0 @@
-echo "This script contains variable MY_VAR as $MY_VAR"

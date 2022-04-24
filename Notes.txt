@@ -1,0 +1,15 @@
+Would be good to come up with some example jobs to do with shell scripts.
+
+Count the number of solution files .sln within a folder,
+and list them.
+
+Should be easy enough.
+
+Need to write a (recursive) function that checks the number of .sln files in a folder.
+
+If they encounter a folder, then recurse on this folder.
+
+So need to look up functions first of all.
+
+Should be easy enough.
+
