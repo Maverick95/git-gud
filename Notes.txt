@@ -2,14 +2,18 @@ Would be good to come up with some example jobs to do with shell scripts.
 
 Count the number of solution files .sln within a folder,
 and list them.
-
 Should be easy enough.
-
 Need to write a (recursive) function that checks the number of .sln files in a folder.
-
 If they encounter a folder, then recurse on this folder.
-
 So need to look up functions first of all.
-
 Should be easy enough.
+Problem with your approach is, there is probably a much simpler way.
+Are there any better sources for learning about shell script basics?
+
+
+Script ideas -
+
+a) a script that checks and syncs your local GIT repository with a remote one,
+this ensures that if there is a repo that say you hardly use, but other people
+commit to it, yours stays up to date.
 
