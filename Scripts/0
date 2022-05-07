@@ -1,0 +1,4 @@
+#!/bin/sh
+# This is a stupid program to confirm that ./* is a valid shellcommand.
+# Running ./* from the terminal will echo the first 3 file names that aren't this 0 file.
+echo $1 $2 $3

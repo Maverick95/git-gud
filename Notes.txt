@@ -17,3 +17,11 @@ a) a script that checks and syncs your local GIT repository with a remote one,
 this ensures that if there is a repo that say you hardly use, but other people
 commit to it, yours stays up to date.
 
+https://www.grymoire.com/Unix/Bourne.html
+
+Currently on
+https://www.grymoire.com/Unix/Bourne.html#toc-uh-17
+
+https://git-scm.com/docs/git-shell
+
+What are awk and sed?
