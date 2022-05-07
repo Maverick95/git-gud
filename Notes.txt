@@ -20,8 +20,14 @@ commit to it, yours stays up to date.
 https://www.grymoire.com/Unix/Bourne.html
 
 Currently on
-https://www.grymoire.com/Unix/Bourne.html#toc-uh-17
+https://www.grymoire.com/Unix/Bourne.html#toc-uh-39
 
 https://git-scm.com/docs/git-shell
 
 What are awk and sed?
+
+You have access to the UNIX command "make",
+looking into makefiles might be interesting.
+
+Enough rubbish, I want to write a proper script.
+
