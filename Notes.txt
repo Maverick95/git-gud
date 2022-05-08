@@ -31,3 +31,10 @@ looking into makefiles might be interesting.
 
 Enough rubbish, I want to write a proper script.
 
+Okay, so there are probably some ways of doing this.
+But it involves you dealing with the header file first, and then each subsequent line.
+And I'm not sure if the UNIX operations can really help you.
+
+Can you have pipes that include your own functions / processses / scripts?
+
+https://swcarpentry.github.io/shell-novice/06-script/index.html
