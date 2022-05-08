@@ -38,3 +38,19 @@ And I'm not sure if the UNIX operations can really help you.
 Can you have pipes that include your own functions / processses / scripts?
 
 https://swcarpentry.github.io/shell-novice/06-script/index.html
+
+With the output of ps, manipulating this currently appears to be a pain,
+because the output as you have it now, follows no simple structure.
+
+The question with pipes I want to answer is,
+if I run this command,
+ps -fW | wc -l
+there is only one line outputted,
+i.e. wc accepts one input, that is the entire output of ps -fW
+i.e. you cannot use wc on a line-by-line basis.
+I don't understand how piping the output of a process is used in the following
+process. Are the output(s) available as variables? How do you actually access and use them?
+Or is it the read command?
+Yes, I think it is the read command
+
+This is the command that will unlock EVERYTHING.
