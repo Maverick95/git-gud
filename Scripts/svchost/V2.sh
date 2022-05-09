@@ -1,5 +1,3 @@
 #!/bin/sh
-# Currently stumped for ideas.
-# Need to look at more UNIX methods I think.
-# Try outputting to file first.
-ps -fW > "./Files/ps.txt"
+PROCESS_REGEX="$1"
+ps -sW | tail -n +2 | cut -c 3-7,26- | grep "${PROCESS_REGEX:?"Please supply a Regex pattern for processes."}" | cut -f 1 -d " " | sort -n

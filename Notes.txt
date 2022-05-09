@@ -54,3 +54,18 @@ Or is it the read command?
 Yes, I think it is the read command
 
 This is the command that will unlock EVERYTHING.
+
+As with all new languages, difficult to know where to start, in terms of thinking in the tools given.
+
+As an interesting example, I would like to see how I go on, by processing table output.
+
+What do you want to try and do?
+
+PIDs.
+
+I would exploit knowledge of the system.
+
+Using -sW,
+
+PID runs chars 0-4
+COMMAND runs chars 24-end
