@@ -1,0 +1,7 @@
+commit b56d8abd04abaee7fab74cdd99bb1972c3b79bbf
+Author: Nick Emmerson <nickemmerson619@hotmail.com>
+Date:   Sun Apr 24 21:40:23 2022 +0100
+
+    Practice script to count number of Visual Studio solutions within folder.
+    Tested and works but probably very inefficient.
+
