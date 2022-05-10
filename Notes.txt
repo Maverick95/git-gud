@@ -69,3 +69,9 @@ Using -sW,
 
 PID runs chars 0-4
 COMMAND runs chars 24-end
+
+Interested in a shell script to get all commits associated with a particular #number.
+
+But first would like to see the /usr/bin folder in the PATH.
+
+Read up on expr on Grymoire, this may really help.
