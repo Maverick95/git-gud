@@ -81,3 +81,5 @@ I've got the feeling there's a MUCH better way of doing the PATH thing.
 Okay, continue with the next challenge.
 Try and get all the commit hashes associated with a ticket number.
 
+Next step is to read each file and look for #ticketnumber
+
