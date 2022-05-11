@@ -75,3 +75,9 @@ Interested in a shell script to get all commits associated with a particular #nu
 But first would like to see the /usr/bin folder in the PATH.
 
 Read up on expr on Grymoire, this may really help.
+
+I've got the feeling there's a MUCH better way of doing the PATH thing.
+
+Okay, continue with the next challenge.
+Try and get all the commit hashes associated with a ticket number.
+
