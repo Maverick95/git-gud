@@ -15,11 +15,8 @@ check_user_details()
       exit 0
     ) ||
     (
-      echo "Hey dude, your user details looks incorrect. Commit anyway? (y to commit) : "
-      read ANSWER
-      [ "$ANSWER" = "y" ] && \
-        exit 0 ||
-        exit 1
+      echo "Hey dude, your user details looks incorrect."
+      exit 1
     )
 }
 
