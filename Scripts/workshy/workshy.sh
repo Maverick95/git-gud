@@ -1,6 +1,7 @@
 #!/bin/sh
 
 # Function for inserting lines into script
+
 insert_vars()
 {
     LINE=0
@@ -54,4 +55,4 @@ do
     shift
 done
 git config --global core.hooksPath "$HOOKS"
-cat ./Scripts/workshy/V1.sh | insert_vars "$NAME" "$EMAIL" > "$HOOKS\\commit-msg"
+cat ./Scripts/workshy/commit-msg-base | insert_vars "$NAME" "$EMAIL" > "$HOOKS\\commit-msg"
