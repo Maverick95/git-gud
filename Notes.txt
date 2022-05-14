@@ -83,3 +83,4 @@ Try and get all the commit hashes associated with a ticket number.
 
 Next step is to read each file and look for #ticketnumber
 
+Nice job on workshy, would be good to add some instructions.
