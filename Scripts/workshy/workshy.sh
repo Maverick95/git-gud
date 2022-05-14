@@ -16,7 +16,12 @@ insert_vars()
 }
 
 # Main script
-[ $# -eq 0 ] && exit 1
+# Commands are required to be in the order [-u] -n NAME [OTHER_NAMES...] -e EMAIL [OTHER_EMAILS...] -h HOOKS
+
+if [ "$1" = "-u" ]; then
+    SET_USER="Y"
+    shift
+fi
 [ "$1" != "-n" ] && exit 1
 shift
 [ "$1" = "-e" ] && exit 1
@@ -35,9 +40,11 @@ shift
 shift
 [ $# -eq 0 ] && exit 1
 # At this point, remaining arguments are all hook folders.
-# Update .gitconfig user file.
+# Update .gitconfig user file for user if required.
+[ "$SET_USER" ] && (
 git config --global user.name "$NAME"
 git config --global user.email "$EMAIL"
+)
 # For each remaining argument, check the folder exists within user directory, if not create it.
 HOOKS="$USERPROFILE"
 while [ $# -gt 0 ]
@@ -48,5 +55,3 @@ do
 done
 git config --global core.hooksPath "$HOOKS"
 cat ./Scripts/workshy/V1.sh | insert_vars "$NAME" "$EMAIL" >> "$HOOKS\\commit-msg"
-# Old script below
-# cp -T ./Scripts/workshy/V1.sh "$USERPROFILE\\Git\\Hooks\\commit-msg"
