@@ -54,4 +54,4 @@ do
     shift
 done
 git config --global core.hooksPath "$HOOKS"
-cat ./Scripts/workshy/V1.sh | insert_vars "$NAME" "$EMAIL" >> "$HOOKS\\commit-msg"
+cat ./Scripts/workshy/V1.sh | insert_vars "$NAME" "$EMAIL" > "$HOOKS\\commit-msg"
