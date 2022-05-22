@@ -84,3 +84,10 @@ Try and get all the commit hashes associated with a ticket number.
 Next step is to read each file and look for #ticketnumber
 
 Nice job on workshy, would be good to add some instructions.
+
+Next goals - look at sed and awk.
+
+TODO - look at getopts this may help a lot
+
+TODO - maybe look at the git plumbing commands
+instead of the user-facing commands, may be better for your needs.
