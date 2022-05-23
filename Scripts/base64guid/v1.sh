@@ -1,5 +1,5 @@
 #!/bin/sh
-# Get the Regex right step-by-step
+# This works but seems horribly slow.
 echo "$1" | \
 tr -t "[:upper:]" "[:lower:]" | \
 (
@@ -9,13 +9,4 @@ tr -t "[:upper:]" "[:lower:]" | \
     exit 1
   fi
   echo "$INPUT"
-) | \
-tr -d "-" | \
-(
-  read INPUT
-  while [ -n "$INPUT" ]
-  do
-    echo "$INPUT" | cut -c 1-2
-    INPUT=`echo "$INPUT" | cut -c 3-`
-  done
-)
+) | tr -d "-" | xxd -p -r | base64
