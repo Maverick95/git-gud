@@ -91,3 +91,5 @@ TODO - look at getopts this may help a lot
 
 TODO - maybe look at the git plumbing commands
 instead of the user-facing commands, may be better for your needs.
+
+https://www.gnu.org/software/coreutils/manual/html_node/index.html#SEC_Contents
