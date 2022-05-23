@@ -7,10 +7,9 @@ HISTORY="$1"; TICKET="$2"
   git log -$HISTORY | csplit -f "./Files/committers/commit" -n 3 -z - '/^commit [0-9a-f]\{40\}$/' '{*}' > /dev/null
   egrep -nH -d "recurse" "^(.* )?#$TICKET( .*)?$" ./Files/committers | \
   (
-    while read INPUT
+    IFS=":"
+    while read FILE LINE REST
     do
-      FILE=`echo "$INPUT" | cut -f 1 -d ":"`
-      LINE=`echo "$INPUT" | cut -f 2 -d ":"`
       [ $LINE -gt 3 ] && echo "$FILE"
     done
   ) | \
