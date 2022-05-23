@@ -1,38 +1,10 @@
 #!/bin/sh
-HISTORY="$1"; TICKET="$2"
-./Scripts/committers/IsInteger.sh "$HISTORY" && \
-./Scripts/committers/IsInteger.sh "$TICKET" && \
+git log --grep="^(.* )?#$1( .*)?$" -E --oneline | \
+cut -f 1 -d " " | \
 (
-  [ -e ./Files/committers/commit000 ] && rm ./Files/committers/*
-  git log -$HISTORY | csplit -f "./Files/committers/commit" -n 3 -z - '/^commit [0-9a-f]\{40\}$/' '{*}' > /dev/null
-  egrep -nH -d "recurse" "^(.* )?#$TICKET( .*)?$" ./Files/committers | \
-  (
-    IFS=":"
-    while read FILE LINE REST
-    do
-      [ $LINE -gt 3 ] && echo "$FILE"
-    done
-  ) | \
-  (
-    while read INPUT
-    do
-      head -n 1 "$INPUT" | cut -f 2 -d " "
-    done
-  ) | \
-  (
-    while read INPUT
-    do
-      git diff-tree --no-commit-id --name-only -r "$INPUT"
-    done
-  ) | sort | \
-  (
-    PREVIOUS=
-    while read INPUT
-    do
-      if [ "$INPUT" != "$PREVIOUS" ]; then
-        echo "$INPUT"
-        PREVIOUS="$INPUT"
-      fi
-    done
-  )
-)
+  while read INPUT
+  do
+    git diff-tree --no-commit-id --name-only -r "$INPUT"
+  done
+ ) | \
+sort -u
