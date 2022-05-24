@@ -93,3 +93,11 @@ And how can I get information on these?
 How can I track the scheduling of the services?
 
 Or more importantly, what are the 
+Next goals - look at sed and awk.
+
+TODO - look at getopts this may help a lot
+
+TODO - maybe look at the git plumbing commands
+instead of the user-facing commands, may be better for your needs.
+
+https://www.gnu.org/software/coreutils/manual/html_node/index.html#SEC_Contents
