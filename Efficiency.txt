@@ -1,0 +1,11 @@
+What do the metrics in Task Manager even mean?
+
+What do the CPU metrics mean?
+
+It's basically Firefox using everything.
+
+https://www.youtube.com/watch?v=CgETJWTsUuo
+
+Firebird SQL Magix edition runs service FABS.exe
+Linked to ASUS MX Suite, ASUS Video Easy, ASUS Music Maker
+Removed all, FABS.exe disappeared. Hurray! 
