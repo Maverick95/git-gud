@@ -3,5 +3,5 @@
 echo "$PATH" |
 tr [=:=] "\n" |
 xargs -I "{}" ls -1 --color=no --file-type "{}" |
-grep "$1.exe$" |
+grep -i "$1.exe$" |
 sort
