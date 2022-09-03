@@ -101,3 +101,14 @@ TODO - maybe look at the git plumbing commands
 instead of the user-facing commands, may be better for your needs.
 
 https://www.gnu.org/software/coreutils/manual/html_node/index.html#SEC_Contents
+
+What shell script things can I work on?
+
+I would consider just reading through the standard unix commands and
+learning new things.
+
+Hey I've got a good one.
+Why don't you write something that can search your PATHs for a file?
+
+
+
