@@ -110,4 +110,28 @@ learning new things.
 Have a look at how the git-bash boots up and adding custom paths for your
 shitty scripts
 
+chroot
+Finally
 
+What would be great practice for scripts is to find some exe applications
+that give strong data output.
+
+Can you use sed to modify your pathfinder command to print off the path where it was found?
+
+I'm not that good.
+
+Trying to do anything in sed or awk is really tricky.
+
+There's a really steep learning curve, and tbh I'm tired and frustrated.
+
+Okay, so what you need to do, is -
+
+a) decide on things you WANT to do,
+b) break these down into SPECIFICATIONS,
+c) read through SED and work it out.
+
+1) Return established connections through NETSTAT along with the header.
+
+Return rows where EITHER -
+a) it is the header row, OR
+b) it ends with ESTABLISHED
