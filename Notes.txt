@@ -135,3 +135,23 @@ c) read through SED and work it out.
 Return rows where EITHER -
 a) it is the header row, OR
 b) it ends with ESTABLISHED
+
+https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/netstat
+
+What does the output mean? Interpretation of Local Address / Foreign Address
+What is IP address 0.0.0.0?
+https://unix.stackexchange.com/questions/107962/what-does-0-0-0-0-mean-in-netstat
+What is a listening port?
+https://linuxize.com/post/check-listening-ports-linux/
+What is 127.0.0.1?
+https://en.wikipedia.org/wiki/Localhost
+
+Maybe read up a little bit on TCP, might be interesting.
+https://en.wikipedia.org/wiki/Transmission_Control_Protocol
+
+What if you tried to establish a TCP connection with say an ASP.NET server running locally?
+
+http://www.medianet.kent.edu/techreports/TR2005-07-22-tcp-EFSM.pdf
+
+Maybe read a bit more later.
+Start off with something simpler like ARP.
