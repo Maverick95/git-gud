@@ -1,0 +1,466 @@
+Image Name:   lsass.exe
+PID:          840
+Services:     KeyIso
+              SamSs
+              VaultSvc
+
+Image Name:   svchost.exe
+PID:          948
+Services:     BrokerInfrastructure
+              DcomLaunch
+              PlugPlay
+              Power
+              SystemEventsBroker
+
+Image Name:   svchost.exe
+PID:          464
+Services:     RpcEptMapper
+              RpcSs
+
+Image Name:   svchost.exe
+PID:          496
+Services:     LSM
+
+Image Name:   svchost.exe
+PID:          1132
+Services:     TermService
+
+Image Name:   svchost.exe
+PID:          1156
+Services:     NcbService
+
+Image Name:   svchost.exe
+PID:          1164
+Services:     TimeBrokerSvc
+
+Image Name:   svchost.exe
+PID:          1220
+Services:     HvHost
+
+Image Name:   svchost.exe
+PID:          1292
+Services:     hidserv
+
+Image Name:   svchost.exe
+PID:          1416
+Services:     EventLog
+
+Image Name:   svchost.exe
+PID:          1496
+Services:     ProfSvc
+
+Image Name:   svchost.exe
+PID:          1504
+Services:     Themes
+
+Image Name:   svchost.exe
+PID:          1512
+Services:     SysMain
+
+Image Name:   svchost.exe
+PID:          1524
+Services:     EventSystem
+
+Image Name:   svchost.exe
+PID:          1656
+Services:     SENS
+
+Image Name:   svchost.exe
+PID:          1764
+Services:     AudioEndpointBuilder
+
+Image Name:   svchost.exe
+PID:          1772
+Services:     FontCache
+
+Image Name:   svchost.exe
+PID:          1824
+Services:     Schedule
+
+Image Name:   svchost.exe
+PID:          1912
+Services:     UserManager
+
+Image Name:   svchost.exe
+PID:          1960
+Services:     nsi
+
+Image Name:   svchost.exe
+PID:          1992
+Services:     Dhcp
+
+Image Name:   svchost.exe
+PID:          2044
+Services:     NlaSvc
+
+Image Name:   svchost.exe
+PID:          2084
+Services:     Audiosrv
+
+Image Name:   svchost.exe
+PID:          2136
+Services:     netprofm
+
+Image Name:   svchost.exe
+PID:          2208
+Services:     Wcmsvc
+
+Image Name:   svchost.exe
+PID:          2212
+Services:     DusmSvc
+
+Image Name:   svchost.exe
+PID:          2224
+Services:     Dnscache
+
+Image Name:   svchost.exe
+PID:          2508
+Services:     UmRdpService
+
+Image Name:   svchost.exe
+PID:          2540
+Services:     hns
+
+Image Name:   svchost.exe
+PID:          2612
+Services:     CertPropSvc
+
+Image Name:   svchost.exe
+PID:          2620
+Services:     WinHttpAutoProxySvc
+
+Image Name:   svchost.exe
+PID:          2720
+Services:     WlanSvc
+
+Image Name:   svchost.exe
+PID:          2744
+Services:     LanmanWorkstation
+
+Image Name:   svchost.exe
+PID:          2784
+Services:     ShellHWDetection
+
+Image Name:   svchost.exe
+PID:          2792
+Services:     SessionEnv
+
+Image Name:   svchost.exe
+PID:          2816
+Services:     StateRepository
+
+Image Name:   spoolsv.exe
+PID:          2964
+Services:     Spooler
+
+Image Name:   svchost.exe
+PID:          2992
+Services:     BFE
+              mpssvc
+
+Image Name:   svchost.exe
+PID:          3056
+Services:     nvagent
+
+Image Name:   svchost.exe
+PID:          2656
+Services:     SharedAccess
+
+Image Name:   svchost.exe
+PID:          2272
+Services:     IKEEXT
+
+Image Name:   svchost.exe
+PID:          2588
+Services:     PolicyAgent
+
+Image Name:   aaHMSvc.exe
+PID:          3116
+Services:     asHmComSvc
+
+Image Name:   AsSysCtrlService.exe
+PID:          3124
+Services:     AsSysCtrlService
+
+Image Name:   atkexComSvc.exe
+PID:          3136
+Services:     asComSvc
+
+Image Name:   svchost.exe
+PID:          3164
+Services:     AppHostSvc
+
+Image Name:   mDNSResponder.exe
+PID:          3180
+Services:     Bonjour Service
+
+Image Name:   svchost.exe
+PID:          3192
+Services:     CoreMessagingRegistrar
+
+Image Name:   AsHookDevice.exe
+PID:          3200
+Services:     Device Handle Service
+
+Image Name:   svchost.exe
+PID:          3208
+Services:     CryptSvc
+
+Image Name:   svchost.exe
+PID:          3224
+Services:     DeviceAssociationService
+
+Image Name:   svchost.exe
+PID:          3236
+Services:     DiagTrack
+
+Image Name:   svchost.exe
+PID:          3260
+Services:     DPS
+
+Image Name:   svchost.exe
+PID:          3276
+Services:     fdPHost
+
+Image Name:   HeciServer.exe
+PID:          3288
+Services:     Intel(R) Capability Licensing Service Interface
+
+Image Name:   svchost.exe
+PID:          3316
+Services:     Winmgmt
+
+Image Name:   Jhi_service.exe
+PID:          3336
+Services:     jhi_service
+
+Image Name:   svchost.exe
+PID:          3444
+Services:     W3SVC
+              WAS
+
+Image Name:   sqlwriter.exe
+PID:          3512
+Services:     SQLWriter
+
+Image Name:   WirelessKB850NotificationService.exe
+PID:          3544
+Services:     WirelessKB850NotificationService
+
+Image Name:   ViakaraokeSrv.exe
+PID:          3552
+Services:     VIAKaraokeService
+
+Image Name:   svchost.exe
+PID:          3564
+Services:     TrkWks
+
+Image Name:   svchost.exe
+PID:          3572
+Services:     stisvc
+
+Image Name:   svchost.exe
+PID:          3580
+Services:     WpnService
+
+Image Name:   svchost.exe
+PID:          3592
+Services:     SstpSvc
+
+Image Name:   svchost.exe
+PID:          3624
+Services:     Wecsvc
+
+Image Name:   svchost.exe
+PID:          3636
+Services:     iphlpsvc
+
+Image Name:   snmp.exe
+PID:          3644
+Services:     SNMP
+
+Image Name:   SMSvcHost.exe
+PID:          3824
+Services:     NetPipeActivator
+              NetTcpActivator
+              NetTcpPortSharing
+
+Image Name:   svchost.exe
+PID:          3840
+Services:     WdiServiceHost
+
+Image Name:   mqsvc.exe
+PID:          3848
+Services:     MSMQ
+
+Image Name:   svchost.exe
+PID:          4316
+Services:     LanmanServer
+
+Image Name:   svchost.exe
+PID:          4344
+Services:     RasMan
+
+Image Name:   svchost.exe
+PID:          4476
+Services:     FDResPub
+
+Image Name:   svchost.exe
+PID:          4788
+Services:     SSDPSRV
+
+Image Name:   com.docker.service
+PID:          4852
+Services:     com.docker.service
+
+Image Name:   SMSvcHost.exe
+PID:          5584
+Services:     NetMsmqActivator
+
+Image Name:   svchost.exe
+PID:          6152
+Services:     DispBrokerDesktopSvc
+
+Image Name:   svchost.exe
+PID:          5636
+Services:     PcaSvc
+
+Image Name:   svchost.exe
+PID:          3884
+Services:     CDPSvc
+
+Image Name:   GoProDeviceDetection.exe
+PID:          5672
+Services:     GoProDeviceDetectionService
+
+Image Name:   svchost.exe
+PID:          6744
+Services:     StorSvc
+
+Image Name:   LMS.exe
+PID:          1452
+Services:     LMS
+
+Image Name:   SgrmBroker.exe
+PID:          6404
+Services:     SgrmBroker
+
+Image Name:   svchost.exe
+PID:          904
+Services:     wscsvc
+
+Image Name:   svchost.exe
+PID:          3372
+Services:     UsoSvc
+
+Image Name:   UNS.exe
+PID:          5080
+Services:     UNS
+
+Image Name:   svchost.exe
+PID:          7164
+Services:     TabletInputService
+
+Image Name:   svchost.exe
+PID:          7012
+Services:     TokenBroker
+
+Image Name:   svchost.exe
+PID:          7308
+Services:     RmSvc
+
+Image Name:   svchost.exe
+PID:          8788
+Services:     LicenseManager
+
+Image Name:   SecurityHealthService.exe
+PID:          9052
+Services:     SecurityHealthService
+
+Image Name:   svchost.exe
+PID:          10120
+Services:     Appinfo
+
+Image Name:   svchost.exe
+PID:          6804
+Services:     InstallService
+
+Image Name:   svchost.exe
+PID:          10744
+Services:     DsSvc
+
+Image Name:   svchost.exe
+PID:          3756
+Services:     BthAvctpSvc
+
+Image Name:   nsWscSvc.exe
+PID:          4868
+Services:     nsWscSvc
+
+Image Name:   svchost.exe
+PID:          9420
+Services:     DoSvc
+
+Image Name:   NortonSecurity.exe
+PID:          2888
+Services:     NortonSecurity
+
+Image Name:   OfficeClickToRun.exe
+PID:          4724
+Services:     ClickToRunSvc
+
+Image Name:   SearchIndexer.exe
+PID:          8884
+Services:     WSearch
+
+Image Name:   svchost.exe
+PID:          7860
+Services:     lmhosts
+
+Image Name:   svchost.exe
+PID:          5956
+Services:     CDPUserSvc_1406b8d3
+
+Image Name:   svchost.exe
+PID:          9456
+Services:     WpnUserService_1406b8d3
+
+Image Name:   svchost.exe
+PID:          9816
+Services:     cbdhsvc_1406b8d3
+
+Image Name:   svchost.exe
+PID:          8052
+Services:     OneSyncSvc_1406b8d3
+              PimIndexMaintenanceSvc_1406b8d3
+              UnistoreSvc_1406b8d3
+              UserDataSvc_1406b8d3
+
+Image Name:   svchost.exe
+PID:          7124
+Services:     LxssManager
+
+Image Name:   svchost.exe
+PID:          7584
+Services:     BITS
+
+Image Name:   svchost.exe
+PID:          12704
+Services:     camsvc
+
+Image Name:   svchost.exe
+PID:          6868
+Services:     AppXSvc
+
+Image Name:   svchost.exe
+PID:          724
+Services:     ClipSVC
+
+Image Name:   svchost.exe
+PID:          11076
+Services:     gpsvc
+
+Image Name:   svchost.exe
+PID:          8380
+Services:     WdiSystemHost
+
