@@ -1,36 +1,62 @@
 #!/bin/bash
-REG_QUERY="HKLM\System\CurrentControlSet\Services"
+# First draft of your registry helper script
 
-getopts "c:" "ARG_CATEGORY"
-if [ $ARG_CATEGORY = "?" ]
-then
-    exit 1
-else
-    ARG_CATEGORY=$OPTARG
-fi
+# Deal with parameters and options
+OPT_DATA=
+ARGS_PROCESSED=0
+ARG_REGENTRY=
+ARG_CATEGORY=
 
-getopts "d:" "ARG_DATA"
-if [ $ARG_DATA = "?" ]
-then
-    ARG_DATA=""
-else
-    ARG_DATA=$OPTARG
-fi
+while [[ $# -gt 0 ]]
+do
+    case "$1" in
+        (-f)
+            OPT_DATA="$2"
+            shift 2
+            ;;
+        (-k|-v|-d)
+            if [[ -n "$ARG_CATEGORY" ]]
+            then
+                echo "Only supply one category" >&2
+                exit 1
+            fi
+            ARG_CATEGORY="$1"
+            shift
+            ;;
+        (*)
+            case $ARGS_PROCESSED in
+                (0)
+                    ARG_REGENTRY="$1"
+                    ;;
+                (*)
+                    echo "Too many arguments supplied" >&2
+                    exit 1
+                    ;;
+            esac
+            ARGS_PROCESSED=$(( $ARGS_PROCESSED + 1 ))
+            shift
+            ;;
+        esac
+done
 
-# Need to work out how to write the next line
-if [ $ARG_CATEGORY = "k" ]
-then
-    NUM_SLASHES=$(( 1 + $(
-        echo -n "$REG_QUERY" |
-        sed -E 's/[^\\]//g' |
-        wc -m
-    ) ))
-    SED_REPLACE="([^\\\\]*\\\\){$NUM_SLASHES}"
+[[ -z "$OPT_DATA" ]] && ( OPT_DATA="*" )
 
-    reg query "$REG_QUERY" -f "*" -k |
-    tail -n +2 |
-    head -n -1 |
-    sed -E "s/$SED_REPLACE//"
-else
-    exit 1
-fi
+NUM_SLASHES_IN_SUBKEY=$(( 1 + $(
+    echo -n "$ARG_REGENTRY" |
+    sed -E 's/[^\\]//g' |
+    wc -m
+) ))
+SED_REPLACE_FOR_SUBKEY="([^\\\\]*\\\\){$NUM_SLASHES_IN_SUBKEY}"
+
+case "$ARG_CATEGORY" in
+    (-k)
+        reg query "$ARG_REGENTRY" -f "$OPT_DATA" -k |
+        tail -n +2 |
+        head -n -1 |
+        sed -E "s/$SED_REPLACE_FOR_SUBKEY//"
+        ;;
+    (*)
+        echo "Invalid arguments" >&2
+        exit 1
+        ;;
+esac
