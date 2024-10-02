@@ -1,11 +1,12 @@
 #!/bin/bash
 # First draft of your registry helper script
 
-# Deal with parameters and options
+DIR=$(echo "${0%/*}")
 OPT_DATA=
 ARGS_PROCESSED=0
 ARG_REGENTRY=
 ARG_CATEGORY=
+RECURSIVE=0
 
 while [[ $# -gt 0 ]]
 do
@@ -13,6 +14,10 @@ do
         (-f)
             OPT_DATA="$2"
             shift 2
+            ;;
+        (-s)
+            RECURSIVE=1
+            shift
             ;;
         (-k|-v|-d)
             if [[ -n "$ARG_CATEGORY" ]]
@@ -41,19 +46,51 @@ done
 
 [[ -z "$OPT_DATA" ]] && ( OPT_DATA="*" )
 
-NUM_SLASHES_IN_SUBKEY=$(( 1 + $(
-    echo -n "$ARG_REGENTRY" |
-    sed -E 's/[^\\]//g' |
-    wc -m
-) ))
-SED_REPLACE_FOR_SUBKEY="([^\\\\]*\\\\){$NUM_SLASHES_IN_SUBKEY}"
+# AWK has trouble with single backslashes where regex is concerned
+ARG_REGENTRY_AWK=$(echo "$ARG_REGENTRY" | sed -E 's/\\/\\\\/g')
 
 case "$ARG_CATEGORY" in
     (-k)
-        reg query "$ARG_REGENTRY" -f "$OPT_DATA" -k |
-        tail -n +2 |
-        head -n -1 |
-        sed -E "s/$SED_REPLACE_FOR_SUBKEY//"
+        if [[ RECURSIVE -eq 1 ]]
+        then
+            reg query "$ARG_REGENTRY" -s -f "$OPT_DATA" -k |
+            tail -n +2 |
+            head -n -1 |
+            awk -f "$DIR/transform-key.awk" -v REGENTRY="$ARG_REGENTRY_AWK"
+        else
+            reg query "$ARG_REGENTRY" -f "$OPT_DATA" -k |
+            tail -n +2 |
+            head -n -1 |
+            awk -f "$DIR/transform-key.awk" -v REGENTRY="$ARG_REGENTRY_AWK"
+        fi
+        ;;
+    (-v)
+        if [[ RECURSIVE -eq 1 ]]
+        then
+            reg query "$ARG_REGENTRY" -s -f "$OPTDATA" -v |
+            tail -n +2 |
+            head -n -2 |
+            awk -f "$DIR/transform-value-or-data.awk" -v REGENTRY="$ARG_REGENTRY_AWK"
+        else
+            reg query "$ARG_REGENTRY" -f "$OPTDATA" -v |
+            tail -n +2 |
+            head -n -2 |
+            awk -f "$DIR/transform-value-or-data.awk" -v REGENTRY="$ARG_REGENTRY_AWK"
+        fi
+        ;;
+    (-d)
+        if [[ RECURSIVE -eq 1 ]]
+        then
+            reg query "$ARG_REGENTRY" -s -f "$OPTDATA" -d |
+            tail -n +2 |
+            head -n -2 |
+            awk -f "$DIR/transform-value-or-data.awk" -v REGENTRY="$ARG_REGENTRY_AWK"
+        else
+            reg query "$ARG_REGENTRY" -f "$OPTDATA" -d |
+            tail -n +2 |
+            head -n -2 |
+            awk -f "$DIR/transform-value-or-data.awk" -v REGENTRY="$ARG_REGENTRY_AWK"
+        fi
         ;;
     (*)
         echo "Invalid arguments" >&2
