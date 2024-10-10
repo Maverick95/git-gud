@@ -67,12 +67,12 @@ case "$ARG_CATEGORY" in
     (-v)
         if [[ RECURSIVE -eq 1 ]]
         then
-            reg query "$ARG_REGENTRY" -s -f "$OPTDATA" -v |
+            reg query "$ARG_REGENTRY" -s -f "$OPT_DATA" -v |
             tail -n +2 |
             head -n -2 |
             awk -f "$DIR/transform-value-or-data.awk" -v REGENTRY="$ARG_REGENTRY_AWK"
         else
-            reg query "$ARG_REGENTRY" -f "$OPTDATA" -v |
+            reg query "$ARG_REGENTRY" -f "$OPT_DATA" -v |
             tail -n +2 |
             head -n -2 |
             awk -f "$DIR/transform-value-or-data.awk" -v REGENTRY="$ARG_REGENTRY_AWK"
@@ -81,12 +81,12 @@ case "$ARG_CATEGORY" in
     (-d)
         if [[ RECURSIVE -eq 1 ]]
         then
-            reg query "$ARG_REGENTRY" -s -f "$OPTDATA" -d |
+            reg query "$ARG_REGENTRY" -s -f "$OPT_DATA" -d |
             tail -n +2 |
             head -n -2 |
             awk -f "$DIR/transform-value-or-data.awk" -v REGENTRY="$ARG_REGENTRY_AWK"
         else
-            reg query "$ARG_REGENTRY" -f "$OPTDATA" -d |
+            reg query "$ARG_REGENTRY" -f "$OPT_DATA" -d |
             tail -n +2 |
             head -n -2 |
             awk -f "$DIR/transform-value-or-data.awk" -v REGENTRY="$ARG_REGENTRY_AWK"
